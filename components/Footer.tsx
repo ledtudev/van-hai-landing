@@ -28,7 +28,7 @@ export function Footer() {
 
           <div className="text-gray-300 text-sm space-y-2 mb-8">
             <p>Địa chỉ: Vịnh Nam Chơn, chân đèo Hải Vân, liền kề biển Lăng Cô, Phường Hải Vân, Thành Phố Đà Nẵng</p>
-            <p className="font-bold text-white">PKD CĐT: 0905 329 766 (Call/Zalo)</p>
+            <p className="font-bold text-white">PKD CĐT: 08 999 67 999 (Call/Zalo)</p>
           </div>
 
           {/* Social Icons */}
@@ -78,7 +78,7 @@ export function Footer() {
                 />
               </div>
               <p className="text-white text-[10px] md:text-xs font-bold mb-1">Ms. Thu Quỳnh</p>
-              <p className="text-[#d4af37] text-[9px] md:text-[11px] font-bold tracking-tight">0905 329 766</p>
+              <p className="text-[#d4af37] text-[9px] md:text-[11px] font-bold tracking-tight">08 999 67 999</p>
             </div>
           </div>
 

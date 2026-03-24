@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   },
 
   description:
-    "Vinhomes Hải Vân Bay (Vinhomes Làng Vân) – Tổ hợp nghỉ dưỡng sinh thái đẳng cấp quốc tế tại Vịnh Nam Chơn, chân đèo Hải Vân, Đà Nẵng. 512 ha, 5.928 căn biệt thự, shophouse, liền kề. Chủ đầu tư Vinpearl – Vingroup. Hotline: 0905 329 766.",
+    "Vinhomes Hải Vân Bay (Vinhomes Làng Vân) – Tổ hợp nghỉ dưỡng sinh thái đẳng cấp quốc tế tại Vịnh Nam Chơn, chân đèo Hải Vân, Đà Nẵng. 512 ha, 5.928 căn biệt thự, shophouse, liền kề. Chủ đầu tư Vinpearl – Vingroup. Hotline: 08 999 67 999.",
 
   keywords: [
     "Vinhomes Hải Vân Bay",
@@ -70,7 +70,7 @@ export const metadata: Metadata = {
     siteName,
     title: "Vinhomes Hải Vân Bay – Biệt Thự Nghỉ Dưỡng Đẳng Cấp Tại Đà Nẵng",
     description:
-      "Tổ hợp nghỉ dưỡng sinh thái 512 ha tại Vịnh Nam Chơn, chân đèo Hải Vân. Biệt thự, shophouse, liền kề – sở hữu lâu dài. Hotline: 0905 329 766.",
+      "Tổ hợp nghỉ dưỡng sinh thái 512 ha tại Vịnh Nam Chơn, chân đèo Hải Vân. Biệt thự, shophouse, liền kề – sở hữu lâu dài. Hotline: 08 999 67 999.",
     images: [
       {
         url: "https://vinhomeshaivanland.com/wp-content/uploads/2026/03/vinhomes-lang-van.jpg",
@@ -85,7 +85,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Vinhomes Hải Vân Bay – Biệt Thự Nghỉ Dưỡng Đà Nẵng",
     description:
-      "512 ha nghỉ dưỡng sinh thái tại Vịnh Nam Chơn, chân đèo Hải Vân, Đà Nẵng. Hotline: 0905 329 766.",
+      "512 ha nghỉ dưỡng sinh thái tại Vịnh Nam Chơn, chân đèo Hải Vân, Đà Nẵng. Hotline: 08 999 67 999.",
     images: [
       "https://vinhomeshaivanland.com/wp-content/uploads/2026/03/vinhomes-lang-van.jpg",
     ],
@@ -139,7 +139,7 @@ export default function RootLayout({
                 latitude: 16.1147,
                 longitude: 108.1522,
               },
-              telephone: "+84905329766",
+              telephone: "+84899967999",
               numberOfRooms: 5928,
               floorSize: {
                 "@type": "QuantitativeValue",

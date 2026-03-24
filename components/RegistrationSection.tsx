@@ -77,7 +77,7 @@ export function RegistrationSection({ id }: { id?: string }) {
           className="mt-8 text-sm font-semibold text-[#0c1f38] md:text-base"
         >
           Gọi Ngay Để Có Căn Hot - Giá Tốt & Ưu Tiên Lựa Chọn HOTLINE:{' '}
-          <span className="text-[#0056b3]">0905 329 766</span>
+          <span className="text-[#0056b3]">08 999 67 999</span>
         </motion.p>
       </div>
     </section>

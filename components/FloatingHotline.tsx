@@ -29,7 +29,7 @@ export function FloatingHotline() {
     <div className="fixed bottom-4 right-4 md:bottom-6 md:right-6 z-50 flex flex-col items-center gap-3 md:gap-5">
       {/* Zalo Button */}
       <a
-        href="https://zalo.me/0905329766"
+        href="https://zalo.me/0899967999"
         target="_blank"
         rel="noopener noreferrer"
         className="group relative flex h-12 w-12 md:h-16 md:w-16 items-center justify-center"
@@ -50,7 +50,7 @@ export function FloatingHotline() {
 
       {/* Phone Button */}
       <a
-        href="tel:0905329766"
+        href="tel:0899967999"
         className="group relative flex h-12 w-12 md:h-16 md:w-16 items-center justify-center"
       >
         {/* Multi-layered Ripples */}

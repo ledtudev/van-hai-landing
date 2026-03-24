@@ -127,7 +127,7 @@ export function PolicyAndGallerySection() {
               <p className="mt-6 text-sm font-semibold text-white">
                 Gọi Ngay Để Có Căn Hot - Giá Tốt & Ưu Tiên Lựa Chọn
                 <br />
-                HOTLINE: <span className="text-white text-base">0905 329 766</span>
+                HOTLINE: <span className="text-white text-base">08 999 67 999</span>
               </p>
             </div>
           </div>

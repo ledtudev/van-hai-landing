@@ -61,12 +61,12 @@ export function Navbar() {
             : 'bg-gradient-to-b from-[#031024]/90 via-[#031024]/60 to-transparent'
         }`}
       >
-        <div className="relative mx-auto flex max-w-[1400px] items-center justify-between px-4 md:px-6">
+        <div className="relative mx-auto flex max-w-[1500px] items-center justify-between px-4 md:px-6">
           {/* LOGO MOBILE */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.3, duration: 0.4 }}
+            initial={{ opacity: 0, y: -40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3, duration: 0.5, ease: 'easeOut' }}
             className="flex md:hidden items-center z-50"
           >
             <a href="#top" className="block">
@@ -103,21 +103,21 @@ export function Navbar() {
           {/* LOGO GIỮA */}
           <div className="hidden md:flex absolute left-1/2 top-0 -translate-x-1/2 justify-center pointer-events-none w-full h-full group/logo">
             <motion.div
-              initial={{ scale: 0, opacity: 0 }}
-              animate={{ scale: 1, opacity: 0.6 }}
-              transition={{ delay: 0.5, duration: 0.5, ease: 'backOut' }}
+              initial={{ y: -100, opacity: 0 }}
+              animate={{ y: 0, opacity: 0.6 }}
+              transition={{ delay: 0.5, duration: 0.5, ease: 'easeOut' }}
               className="absolute -top-[90px] h-[180px] w-[180px] rounded-full bg-[#031024]/20 backdrop-blur-sm border border-white/5 transition-all duration-700 group-hover/logo:scale-[1.5,1.2] origin-top group-hover/logo:opacity-100"
             />
             <motion.div
-              initial={{ scale: 0, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              transition={{ delay: 0.4, duration: 0.5, ease: 'backOut' }}
+              initial={{ y: -80, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 0.4, duration: 0.5, ease: 'easeOut' }}
               className="absolute -top-[70px] h-[140px] w-[140px] rounded-full bg-[#031024]/40 backdrop-blur-md border border-white/5 transition-all duration-500 group-hover/logo:scale-[1.3,1.6] origin-bottom-left"
             />
             <motion.div
-              initial={{ scale: 0 }}
-              animate={{ scale: 1 }}
-              transition={{ delay: 0.3, duration: 0.45, ease: 'backOut' }}
+              initial={{ y: -60, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 0.3, duration: 0.45, ease: 'easeOut' }}
               className="absolute -top-[45px] h-[100px] w-[100px] rounded-full bg-[#031024]/80 shadow-xl flex items-center justify-center pointer-events-auto border border-white/10 backdrop-blur-md transition-all duration-300 group-hover/logo:scale-110"
             >
               <a
@@ -237,10 +237,10 @@ export function Navbar() {
               <div className="border-t border-white/10 px-6 py-5">
                 <p className="text-xs text-white/50 mb-1">Liên hệ tư vấn</p>
                 <a
-                  href="tel:0905329766"
+                  href="tel:0899967999"
                   className="text-lg font-bold text-[#d4af37] tracking-wider"
                 >
-                  0905 329 766
+                  08 999 67 999
                 </a>
               </div>
             </motion.div>

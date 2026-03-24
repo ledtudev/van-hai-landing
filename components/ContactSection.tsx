@@ -103,8 +103,8 @@ export function ContactSection() {
             </p>
             <p>
               <span className="font-semibold text-emerald-200">PKD CĐT:</span>{" "}
-              <a href="tel:0905329766" className="font-semibold">
-                0905 329 766
+              <a href="tel:0899967999" className="font-semibold">
+                08 999 67 999
               </a>{" "}
               (Call/Zalo)
             </p>
@@ -120,8 +120,8 @@ export function ContactSection() {
             </p>
             <p>
               Ms. Thu Quỳnh –{" "}
-              <a href="tel:0905329766" className="font-semibold">
-                0905 329 766
+              <a href="tel:0899967999" className="font-semibold">
+                08 999 67 999
               </a>{" "}
               (Call/Zalo)
             </p>
