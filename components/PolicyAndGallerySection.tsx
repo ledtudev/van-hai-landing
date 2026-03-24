@@ -1,13 +1,17 @@
 'use client'
 
+import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { ArrowRightCircle } from 'lucide-react'
+import { SuccessToast } from './SuccessToast'
 
 export function PolicyAndGallerySection() {
+  const [submitted, setSubmitted] = useState(false)
   const thumbnails = Array.from({ length: 12 })
 
   return (
-    <section className="relative w-full bg-[#fdfdfc] font-sans pb-16" id="chinh-sach">
+    <section className="relative w-full bg-[#fdfdfc] font-sans pb-16 overflow-x-hidden" id="chinh-sach">
+      <SuccessToast show={submitted} onClose={() => setSubmitted(false)} />
 
       {/* BANNER TOP */}
       <div className="relative w-full h-[350px] md:h-[450px] overflow-hidden">
@@ -105,7 +109,7 @@ export function PolicyAndGallerySection() {
               <p className="text-gray-400 italic text-xs mb-6">
                 * Thông tin của khách hàng luôn được bảo mật tuyệt đối
               </p>
-              <form className="flex flex-col gap-4">
+              <form className="flex flex-col gap-4" onSubmit={(e) => { e.preventDefault(); setSubmitted(true) }}>
                 <input type="text" placeholder="Họ và tên" className="w-full bg-white text-gray-800 px-4 py-3 rounded outline-none focus:ring-2 focus:ring-[#d4af37] text-sm" />
                 <input type="email" placeholder="E-mail" className="w-full bg-white text-gray-800 px-4 py-3 rounded outline-none focus:ring-2 focus:ring-[#d4af37] text-sm" />
                 <input type="tel" placeholder="Số điện thoại" className="w-full bg-white text-gray-800 px-4 py-3 rounded outline-none focus:ring-2 focus:ring-[#d4af37] text-sm" />
@@ -118,7 +122,7 @@ export function PolicyAndGallerySection() {
                 <motion.button
                   whileHover={{ scale: 1.04 }}
                   whileTap={{ scale: 0.96 }}
-                  type="button"
+                  type="submit"
                   className="mt-2 w-[150px] mx-auto bg-[#d4af37] hover:bg-[#c29b47] text-[#0c1f38] font-bold px-6 py-2.5 rounded transition-colors text-sm"
                 >
                   Gửi yêu cầu

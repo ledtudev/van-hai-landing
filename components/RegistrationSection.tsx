@@ -1,10 +1,16 @@
 'use client'
 
+import { useState } from 'react'
 import { motion } from 'framer-motion'
+import { SuccessToast } from './SuccessToast'
 
 export function RegistrationSection({ id }: { id?: string }) {
+  const [submitted, setSubmitted] = useState(false)
+
   return (
     <section id={id} className="relative overflow-hidden border-t border-gray-100 bg-white py-12">
+      <SuccessToast show={submitted} onClose={() => setSubmitted(false)} />
+
       <div
         className="pointer-events-none absolute inset-0 z-0 bg-cover bg-center bg-no-repeat opacity-[0.25]"
         style={{ backgroundImage: "url('https://vinhomeshaivanland.com/wp-content/uploads/2026/03/song.png')" }}
@@ -37,6 +43,7 @@ export function RegistrationSection({ id }: { id?: string }) {
           viewport={{ once: true, margin: '-40px' }}
           transition={{ duration: 0.6, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
           className="mx-auto flex max-w-5xl flex-col items-center justify-center gap-3 md:flex-row"
+          onSubmit={(e) => { e.preventDefault(); setSubmitted(true) }}
         >
           <input
             type="text"
@@ -62,7 +69,7 @@ export function RegistrationSection({ id }: { id?: string }) {
           <motion.button
             whileHover={{ scale: 1.04 }}
             whileTap={{ scale: 0.96 }}
-            type="button"
+            type="submit"
             className="w-full bg-[#0c1f38] px-6 py-2.5 text-sm font-medium text-white transition-colors hover:bg-[#153154] md:w-[150px]"
           >
             Gửi yêu cầu

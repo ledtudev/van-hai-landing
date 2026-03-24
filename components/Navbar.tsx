@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 'use client'
 
 import { AnimatePresence, type Variants, motion } from 'framer-motion'
@@ -17,7 +18,9 @@ export function Navbar() {
   // Khoá scroll body khi menu mobile mở
   useEffect(() => {
     document.body.style.overflow = isMenuOpen ? 'hidden' : ''
-    return () => { document.body.style.overflow = '' }
+    return () => {
+      document.body.style.overflow = ''
+    }
   }, [isMenuOpen])
 
   const menuItems = [
@@ -39,15 +42,22 @@ export function Navbar() {
     visible: {
       x: 0,
       opacity: 1,
-      transition: { type: 'tween' as const, duration: 0.32, ease: [0.4, 0, 0.2, 1] },
+      transition: {
+        type: 'tween' as const,
+        duration: 0.32,
+        ease: [0.4, 0, 0.2, 1],
+      },
     },
     exit: {
       x: '100%',
       opacity: 0,
-      transition: { type: 'tween' as const, duration: 0.26, ease: [0.4, 0, 1, 1] },
+      transition: {
+        type: 'tween' as const,
+        duration: 0.26,
+        ease: [0.4, 0, 1, 1],
+      },
     },
   }
-
 
   return (
     <>
@@ -55,10 +65,10 @@ export function Navbar() {
         initial={{ y: -80, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6, ease: 'easeOut' }}
-        className={`fixed left-0 top-0 z-50 w-full pb-8 pt-5 transition-all duration-500 ${
+        className={`fixed left-0 top-0 z-50 w-full pb-8 pt-5 transition-all duration-500 bg-linear-to-b from-[#031024]/50 via-[#031024]/20 to-transparent ${
           scrolled
-            ? 'bg-[#031024]/95 shadow-[0_4px_30px_rgba(0,0,0,0.5)] backdrop-blur-md'
-            : 'bg-gradient-to-b from-[#031024]/90 via-[#031024]/60 to-transparent'
+            ? 'md:from-[#031024]/95 md:via-[#031024]/95 md:to-[#031024]/95 md:shadow-[0_4px_30px_rgba(0,0,0,0.5)] md:backdrop-blur-md'
+            : 'md:from-[#031024]/90 md:via-[#031024]/60 md:to-transparent'
         }`}
       >
         <div className="relative mx-auto flex max-w-[1500px] items-center justify-between px-4 md:px-6">
@@ -67,13 +77,13 @@ export function Navbar() {
             initial={{ opacity: 0, y: -40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.5, ease: 'easeOut' }}
-            className="flex md:hidden items-center z-50"
+            className=" hidden md:hidden items-center z-50"
           >
             <a href="#top" className="block">
               <img
                 src={logoUrl}
                 alt="Logo Vinhomes Hải Vân Bay"
-                className="h-10 w-auto object-contain opacity-90"
+                className="w-auto max-h-16 max-w-45 object-contain"
               />
             </a>
           </motion.div>
@@ -103,22 +113,22 @@ export function Navbar() {
           {/* LOGO GIỮA */}
           <div className="hidden md:flex absolute left-1/2 top-0 -translate-x-1/2 justify-center pointer-events-none w-full h-full group/logo">
             <motion.div
-              initial={{ y: -100, opacity: 0 }}
+              initial={{ y: -60, opacity: 0 }}
               animate={{ y: 0, opacity: 0.6 }}
               transition={{ delay: 0.5, duration: 0.5, ease: 'easeOut' }}
-              className="absolute -top-[90px] h-[180px] w-[180px] rounded-full bg-[#031024]/20 backdrop-blur-sm border border-white/5 transition-all duration-700 group-hover/logo:scale-[1.5,1.2] origin-top group-hover/logo:opacity-100"
+              className="absolute -top-22.5 h-45 w-45 rounded-full bg-[#031024]/20 backdrop-blur-sm border border-white/5 transition-all duration-700 group-hover/logo:scale-[1.5,1.2] origin-top group-hover/logo:opacity-100"
             />
             <motion.div
               initial={{ y: -80, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.4, duration: 0.5, ease: 'easeOut' }}
-              className="absolute -top-[70px] h-[140px] w-[140px] rounded-full bg-[#031024]/40 backdrop-blur-md border border-white/5 transition-all duration-500 group-hover/logo:scale-[1.3,1.6] origin-bottom-left"
+              className="absolute -top-17.5 h-35 w-35 rounded-full bg-[#031024]/40 backdrop-blur-md border border-white/5 transition-all duration-500 group-hover/logo:scale-[1.3,1.6] origin-bottom-left"
             />
             <motion.div
               initial={{ y: -60, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.3, duration: 0.45, ease: 'easeOut' }}
-              className="absolute -top-[45px] h-[100px] w-[100px] rounded-full bg-[#031024]/80 shadow-xl flex items-center justify-center pointer-events-auto border border-white/10 backdrop-blur-md transition-all duration-300 group-hover/logo:scale-110"
+              className="absolute -top-11.25 h-25 w-25 rounded-full bg-[#031024]/80 shadow-xl flex items-center justify-center pointer-events-auto border border-white/10 backdrop-blur-md transition-all duration-300 group-hover/logo:scale-110"
             >
               <a
                 href="#top"
@@ -127,7 +137,7 @@ export function Navbar() {
                 <img
                   src={logoUrl}
                   alt="Logo Vinhomes Hải Vân Bay"
-                  className="h-full w-full object-contain opacity-90 transition-transform duration-300 group-hover/logo:scale-110"
+                  className="h-full w-full cursor-pointer object-contain opacity-90 transition-transform duration-300 group-hover/logo:scale-110"
                 />
               </a>
             </motion.div>
@@ -161,7 +171,7 @@ export function Navbar() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3 }}
             whileTap={{ scale: 0.9 }}
-            className="block text-white md:hidden hover:text-[#d4af37] z-50"
+            className="block text-white md:hidden hover:text-[#d4af37] z-50 ml-auto"
             onClick={() => setIsMenuOpen(true)}
             aria-label="Mở menu"
           >
@@ -192,7 +202,7 @@ export function Navbar() {
               initial="hidden"
               animate="visible"
               exit="exit"
-              className="fixed right-0 top-0 z-[100] h-full w-[80vw] max-w-sm bg-[#031024] shadow-2xl md:hidden flex flex-col"
+              className="fixed right-0 top-0 z-[100] h-full w-[100vw] max-w-sm bg-[#031024] shadow-2xl md:hidden flex flex-col"
             >
               {/* Header */}
               <div className="flex items-center justify-between border-b border-white/10 px-6 py-5">
@@ -216,7 +226,11 @@ export function Navbar() {
                       key={item.label}
                       initial={{ opacity: 0, x: 30 }}
                       animate={{ opacity: 1, x: 0 }}
-                      transition={{ delay: 0.08 + i * 0.055, duration: 0.3, ease: 'easeOut' }}
+                      transition={{
+                        delay: 0.08 + i * 0.055,
+                        duration: 0.3,
+                        ease: 'easeOut',
+                      }}
                     >
                       <a
                         href={item.href}
